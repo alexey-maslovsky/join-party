@@ -1,0 +1,101 @@
+@font-face {
+  font-family: AppFont;
+  src: url(fonts/Koulen-Regular.ttf);
+}
+
+* {
+  font-family: AppFont;
+}
+
+:root {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: #3E1E68;
+  animation-name: bg;
+  animation-duration: 0.2s;
+  animation-timing-function: steps(10, end);
+  animation-iteration-count: infinite;
+}
+
+* {
+  cursor: url('/images/cursor.png'), auto;
+}
+
+@keyframes bg {
+  0% {
+    background: darkgray;
+  }
+  25% {
+    background: darkorange;
+  }
+  50% {
+    background: darkgreen;
+  }
+  75% {
+    background: darkblue;
+  }
+  100% {
+    background: pink;
+  }
+}
+
+canvas {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  z-index: 9999;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.join {
+  font-size: 10vw;
+  transform: rotate(-10deg);
+  font-size: 10em;
+  letter-spacing: 15px;
+  text-shadow: 1px 1px #b739da, 2px 2px #7de52d, 3px 3px #1c4dff, 4px 4px #82742b, 5px 5px #ff833b, 6px 6px #ff0909, 7px 7px #ff78d6, 8px 8px #a34cff, 9px 9px #27fbff, 10px 10px #00ff84, 10px 10px 30px rgb(0, 0, 0);
+  animation-name: text;
+  animation-duration: 1s;
+  animation-timing-function: steps(10, end);
+  animation-iteration-count: infinite;
+}
+
+.join:hover {
+  animation-duration: 0.1s;
+}
+
+@keyframes text {
+  0% {
+    color: #b739da;
+    text-shadow: 1px 1px #b739da, 2px 2px #7de52d, 3px 3px #1c4dff, 4px 4px #82742b, 5px 5px #ff833b, 6px 6px #ff0909, 7px 7px #ff78d6, 8px 8px #a34cff, 9px 9px #27fbff, 10px 10px #00ff84, 10px 10px 30px rgb(0, 0, 0);
+  }
+  25% {
+    color: #ff833b;
+    text-shadow: 1px 1px #ff833b, 2px 2px #b739da, 3px 3px #1c4dff, 4px 4px #82742b, 5px 5px #7de52d, 6px 6px #ff0909, 7px 7px #a34cff, 8px 8px #ff78d6, 9px 9px #00ff84, 10px 10px #ff78d6, 10px 10px 30px rgb(0, 0, 0);
+  }
+  75% {
+    color: #1c4dff;
+    text-shadow: 1px 1px #1c4dff, 2px 2px #ff833b, 3px 3px #b739da, 4px 4px #82742b, 5px 5px #7de52d, 6px 6px #ff0909, 7px 7px #a34cff, 8px 8px #ff78d6, 9px 9px #27fbff, 10px 10px #ff833b, 10px 10px 30px rgb(0, 0, 0);
+  }
+  100% {
+    color: #b739da;
+    text-shadow: 1px 1px #b739da, 2px 2px #7de52d, 3px 3px #1c4dff, 4px 4px #ff78d6, 5px 5px #ff833b, 6px 6px #00ff84, 7px 7px #82742b, 8px 8px #27fbff, 9px 9px #a34cff, 10px 10px #ff0909, 10px 10px 30px rgb(0, 0, 0);
+  }
+}
