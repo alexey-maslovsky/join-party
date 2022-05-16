@@ -18,6 +18,9 @@ const loadGifs = () => {
       gif.load(`/images/${index + 1}.gif`);
 
       gif.onload = () => {
+        if (index === 9) {
+          gif.playSpeed = 0.01;
+        }
         resolve(gif);
       };
     });
@@ -54,7 +57,7 @@ const render = (context, images) => {
   context.clearRect(0, 0, context.canvas.width, context.canvas.height);
 
   images.map(({ gif, x, y }) => {
-    context.drawImage(gif.image, x, y);
+    context.drawImage(gif.image, x, y, gif.width * 2, gif.height * 2);
   });
 
   requestAnimationFrame(() => render(context, images));

@@ -51,6 +51,7 @@ canvas {
   position: absolute;
   top: 0;
   left: 0;
+  filter: blur(7px);
 }
 
 .overlay {
@@ -59,10 +60,14 @@ canvas {
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 0;
+  top: -100vw;
   left: 0;
   width: 100vw;
   height: 100vh;
+  animation-name: textShowUp;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
 
 .join {
@@ -97,5 +102,16 @@ canvas {
   100% {
     color: #b739da;
     text-shadow: 1px 1px #b739da, 2px 2px #7de52d, 3px 3px #1c4dff, 4px 4px #ff78d6, 5px 5px #ff833b, 6px 6px #00ff84, 7px 7px #82742b, 8px 8px #27fbff, 9px 9px #a34cff, 10px 10px #ff0909, 10px 10px 30px rgb(0, 0, 0);
+  }
+}
+
+
+@keyframes textShowUp {
+  0% {
+    top: -100vw;
+
+  }
+  100% {
+    top: 0vw;
   }
 }
