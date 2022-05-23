@@ -26,6 +26,12 @@ const render = (rootContext, targetContext) => {
   requestAnimationFrame(() => render(rootContext, targetContext));
 };
 
+const handleJoin = () => {
+  document.getElementsByClassName('join')[0].addEventListener('click', () => {
+    window.open(atob('aHR0cHM6Ly90Lm1lLytGLXpXalhMTlVJRm1OMlJp'));
+  });
+};
+
 document.addEventListener('DOMContentLoaded', async () => {
   const rootCanvas = document.createElement('canvas');
   resizeCanvas(rootCanvas);
@@ -41,4 +47,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.body.prepend(rootCanvas);
 
   render(rootContext, targetContext);
+
+  handleJoin();
 });
